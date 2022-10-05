@@ -29,14 +29,8 @@ public class Student {
     }
 
     public void addTestScore(double newTestScores) {
-        accumulatedTestScores += newTestScores;
+        accumulatedTestScores = newTestScores;
         testScoreCount += 1;
-    }
-    public double averageTestScores() {
-        averageTestScores= accumulatedTestScores / testScoreCount;
-        return averageTestScores;
-
-
     }
 
     public boolean isPassing() {
@@ -46,11 +40,20 @@ public class Student {
             return false;
         }
     }
+    public double averageTestScore() {
+        double averageTestScore= accumulatedTestScores / testScoreCount;
+        return averageTestScore;
+
+
+    }
+
 
     public void printStudentInfo(){
         System.out.println("Students full name: " + firstName + lastName);
         System.out.println("Graduation Year: " + gradYear);
+        System.out.println("Number of tests: " + testScoreCount);
         System.out.println("Average Test Scores: " + averageTestScores);
+        System.out.println("Is passing: "+ isPassing());
 
     }
 
