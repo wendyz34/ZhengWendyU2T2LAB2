@@ -32,6 +32,12 @@ public class Student {
         accumulatedTestScores += newTestScores;
         testScoreCount += 1;
     }
+    public double averageTestScores() {
+        averageTestScores= accumulatedTestScores / testScoreCount;
+        return averageTestScores;
+
+
+    }
 
     public boolean isPassing() {
         if (averageTestScores >= 65) {
@@ -41,10 +47,6 @@ public class Student {
         }
     }
 
-    public double averageTestScores() {
-        return averageTestScores = accumulatedTestScores / testScoreCount;
-
-    }
     public void printStudentInfo(){
         System.out.println("Students full name: " + firstName + lastName);
         System.out.println("Graduation Year: " + gradYear);
